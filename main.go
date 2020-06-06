@@ -65,19 +65,18 @@ func caller() ([]string, []string, []string) {
 
 //function to further branch and extract data
 func branch(url string) []string {
-
+	var data []string
 	resp, err := http.Get(url)
 
 	if err != nil {
-		fmt.Println(err)
-		fmt.Println("fail2")
+		return data
 	}
 
 	defer resp.Body.Close()
 
 	doc, _ := goquery.NewDocumentFromReader(resp.Body)
 
-	var data []string
+	
 	doc.Find(".syndicate").Each(func(_ int, p *goquery.Selection) {
 		p.Find(".row").Each(func(_ int, q *goquery.Selection) {
 			q.Find("ul").Each(func(_ int, g *goquery.Selection) {

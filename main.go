@@ -12,7 +12,8 @@ import (
 
 func dis(url string) ([]string, []string, []string) {
 	// making a url request
-	resp, err := http.Get(url)
+	//write err instead of _
+	resp, _ := http.Get(url)
 
 	if err != nil {
 		fmt.Println("fail1")

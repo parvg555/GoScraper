@@ -1,4 +1,5 @@
 package main
+
 //make curly braces paranthesis
 import (
 	"fmt"

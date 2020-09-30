@@ -1,13 +1,13 @@
 package main
 //make curly braces paranthesis
-import {
+import (
 	"fmt"
 	"net/http"
 	"os"
 	"strings"
 
 	"github.com/PuerkitoBio/goquery"
-}
+	)
 
 func dis(url string) ([]string, []string, []string) {
 	// making a url request

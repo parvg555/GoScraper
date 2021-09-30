@@ -215,4 +215,6 @@ func main() {
 	fmt.Println(b)
 	fmt.Println(d)
 	fmt.println("hello")
+	fmt.println("hello world parv noob")
+	fmt.println("lets goo")
 }
